@@ -162,7 +162,7 @@ param (
     $UseScriptDirectory=$True,
 
     ## => User Config <= ## 
-    $ProjectPath = "p3rpc.essentials.csproj",
+    $ProjectPath = "p3rpc.essentials/p3rpc.essentials.csproj",
     $PackageName = "p3rpc.essentials",
     $PublishOutputDir = "Publish/ToUpload",
 
