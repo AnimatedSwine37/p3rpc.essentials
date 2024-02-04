@@ -1,0 +1,30 @@
+{
+  "ModId": "p3rpc.essentials",
+  "ModName": "P3R Essentials",
+  "ModAuthor": "AnimatedSwine37",
+  "ModVersion": "1.0.0",
+  "ModDescription": "Provides base modding support for P3R and miscellaneous fixes.",
+  "ModDll": "p3rpc.essentials.dll",
+  "ModIcon": "Preview.png",
+  "ModR2RManagedDll32": "x86/p3rpc.essentials.dll",
+  "ModR2RManagedDll64": "x64/p3rpc.essentials.dll",
+  "ModNativeDll32": "",
+  "ModNativeDll64": "",
+  "Tags": [],
+  "CanUnload": null,
+  "HasExports": null,
+  "IsLibrary": false,
+  "ReleaseMetadataFileName": "p3rpc.essentials.ReleaseMetadata.json",
+  "PluginData": {},
+  "IsUniversalMod": false,
+  "ModDependencies": [
+    "Reloaded.Memory.SigScan.ReloadedII",
+    "reloaded.sharedlib.hooks",
+    "UnrealEssentials"
+  ],
+  "OptionalDependencies": [],
+  "SupportedAppId": [
+    "p3r.exe"
+  ],
+  "ProjectUrl": ""
+}
