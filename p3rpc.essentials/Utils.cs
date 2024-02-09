@@ -1,5 +1,4 @@
-﻿using p3rpc.essentials.Configuration;
-using Reloaded.Memory.SigScan.ReloadedII.Interfaces;
+﻿using Reloaded.Memory.SigScan.ReloadedII.Interfaces;
 using Reloaded.Mod.Interfaces;
 using System.Diagnostics;
 using System.Text;
@@ -8,14 +7,12 @@ namespace p3rpc.essentials;
 internal class Utils
 {
     private static ILogger _logger;
-    private static Config _config;
     private static IStartupScanner _startupScanner;
     internal static nint BaseAddress { get; private set; }
 
-    internal static bool Initialise(ILogger logger, Config config, IModLoader modLoader)
+    internal static bool Initialise(ILogger logger, IModLoader modLoader)
     {
         _logger = logger;
-        _config = config;
         using var thisProcess = Process.GetCurrentProcess();
         BaseAddress = thisProcess.MainModule!.BaseAddress;
 

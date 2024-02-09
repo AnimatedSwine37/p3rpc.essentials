@@ -4,6 +4,10 @@ using System.ComponentModel;
 namespace p3rpc.essentials.Configuration;
 public class Config : Configurable<Config>
 {
+    [DisplayName("Render In Background")]
+    [Description("Makes the game continue running when not in focus.")]
+    [DefaultValue(false)]
+    public bool RenderInBackground { get; set; } = false;
 }
 
 /// <summary>

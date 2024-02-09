@@ -34,7 +34,7 @@ public class Mod : ModBase // <= Do not Remove.
     /// <summary>
     /// Provides access to this mod's configuration.
     /// </summary>
-    private Config _configuration;
+    public static Config Configuration;
 
     /// <summary>
     /// The configuration of the currently executing mod.
@@ -47,10 +47,12 @@ public class Mod : ModBase // <= Do not Remove.
         _hooks = context.Hooks;
         _logger = context.Logger;
         _owner = context.Owner;
-        _configuration = context.Configuration;
+        Configuration = context.Configuration;
         _modConfig = context.ModConfig;
 
-        // TODO implement anything we want (this is just a dummy mod for now)
+        Utils.Initialise(_logger, _modLoader);
+
+        Patches.NoPauseOnFocusLoss.Activate(_hooks!);
     }
 
     #region Standard Overrides
@@ -58,7 +60,7 @@ public class Mod : ModBase // <= Do not Remove.
     {
         // Apply settings from configuration.
         // ... your code here.
-        _configuration = configuration;
+        Configuration = configuration;
         _logger.WriteLine($"[{_modConfig.ModId}] Config Updated: Applying");
     }
     #endregion
