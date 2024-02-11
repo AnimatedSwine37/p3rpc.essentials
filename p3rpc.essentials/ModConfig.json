@@ -2,7 +2,7 @@
   "ModId": "p3rpc.essentials",
   "ModName": "Persona 3 Reload Essentials",
   "ModAuthor": "AnimatedSwine37",
-  "ModVersion": "1.1.0",
+  "ModVersion": "1.2.0",
   "ModDescription": "Provides base modding support for P3R and miscellaneous fixes.",
   "ModDll": "p3rpc.essentials.dll",
   "ModIcon": "Preview.png",
