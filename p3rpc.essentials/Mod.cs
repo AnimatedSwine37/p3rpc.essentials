@@ -53,6 +53,7 @@ public class Mod : ModBase // <= Do not Remove.
         Utils.Initialise(_logger, _modLoader);
 
         Patches.NoPauseOnFocusLoss.Activate(_hooks!);
+        Patches.IntroSkip.Activate(_hooks!);
     }
 
     #region Standard Overrides
