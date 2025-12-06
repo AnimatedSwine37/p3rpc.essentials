@@ -20,6 +20,19 @@ public class Config : Configurable<Config>
     [Description("Skips the section asking you whether you want network features.\nDoing this will cause network features to be off.")]
     [DefaultValue(false)]
     public bool NetworkSkip { get; set; } = false;
+    
+    [DisplayName("Intro Skip (Episode Aigis)")]
+    [Category("Intro Skip")]
+    [Description("Skip to the main menu for Episode Aigis.")]
+    [DefaultValue(false)]
+    public bool IntroSkipAstrea { get; set; } = false;
+    // public IntroPartAstrea IntroSkipAstrea { get; set; } = IntroPartAstrea.None;
+    
+    [DisplayName("Fast Menu Navigation")]
+    [Category("Intro Skip")]
+    [Description("Let the user make inputs in the title menu immediately.")]
+    [DefaultValue(false)]
+    public bool FastMenuNavigation { get; set; } = false;
 
     public enum IntroPart
     {
@@ -28,7 +41,6 @@ public class Config : Configurable<Config>
         MainMenu,
         LoadMenu
     }
-
 }
 
 /// <summary>
