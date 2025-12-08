@@ -174,7 +174,7 @@ internal unsafe class IntroSkip
     private static ETitleState IntroOP(UTitleStateBase* self, float delta)
     {
         var res = _introHookOP.OriginalFunction(self, delta);
-        if (res != ETitleState.TS_OP || !Mod.Configuration.IntroSkipAstrea) return res;
+        if (res != ETitleState.TS_OP || Mod.Configuration.IntroSkip == IntroPart.OpeningMovie) return res;
         // return InitialLoad ? ETitleState.TS_ResidentReload : ETitleState.TS_PressWait;
         Utils.Log("Skipping to the main menu");
         _opNextState ??= _hooks.CreateWrapper<NextStateDelegate>((long)self->VTable->NextState, out _);
